@@ -37,5 +37,5 @@ This is a simple weather monitoring system using Arduino UNO R3
 <li> BMP180 Barometric Pressure Sensor </li>
 <img src="https://ae01.alicdn.com/kf/HTB1MU9xQFXXXXcwXXXXq6xXFXXXw/Elecrow-GY-68-BMP180-Barometer-Pressure-Temperature-Altitude-Sensor-BMP085-Sensor-Board-Module-for-Arduino-DIY.jpg_640x640.jpg" height="200px" width="200px">
 <li> ESP8266 Wi-Fi Module </li>
-<img src="https://ae01.alicdn.com/kf/HTB1MU9xQFXXXXcwXXXXq6xXFXXXw/Elecrow-GY-68-BMP180-Barometer-Pressure-Temperature-Altitude-Sensor-BMP085-Sensor-Board-Module-for-Arduino-DIY.jpg_640x640.jpg" height="200px" width="200px">
+<img src="https://cf4.s3.souqcdn.com/item/2018/04/22/33/45/22/24/item_L_33452224_130862927.jpg" height="200px" width="200px">
 </ol>
