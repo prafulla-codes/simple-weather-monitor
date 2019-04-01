@@ -1,9 +1,10 @@
 <h3> Simple Weather Monitor v1.0 </h3>
 <hr/>
-This is a simple weather monitoring system using Arduino UNO.
-+ Records Temperature & Humidity
-+ Records Pressure
-+ Records Concentration of CO2
+This is a simple weather monitoring system using Arduino UNO R3
+<br>
++ Records Temperature & Humidity<br>
++ Records Pressure<br>
++ Records Concentration of CO2<br>
 
 <h3> Preview </h3>
 <hr/>
