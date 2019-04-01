@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Air Quality</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<script>
+		//created a new XMLHttpRequest Object
+	var xhr = new XMLHttpRequest();
+	// On Changing the request State
+	xhr.onreadystatechange = function()
+	{
+		if(this.readyState==4 && this.status==200) //if state is=4(response received) and status=200 (no errors)
+		{		
+			var fetched = JSON.parse(xhr.responseText); // parse json file to object 
+            document.getElementById("pressure_value").innerHTML="<p>"+fetched.feeds[0].field1+" PPM";
+
+            /* In Millibar */
+            document.getElementById("inPPB").innerHTML = " Air Quality : "+fetched.feeds[0].field1*1000 + " ( ppb )";
+
+            var airquality = parseFloat(fetched.feeds[0].field1);
+            var status_holder = document.getElementById("status_holder");
+            var status = document.getElementById("currrent_status");
+        
+
+		}
+	}
+	/***************************** Fetch Request to thingspeak ***************************/
+	xhr.open("GET","https://api.thingspeak.com/channels/<YourChannelID>/feeds.json?api_key=<YourAPIKey>&results=1",true);
+	/***************************** Sending of Fetch Request to thingspeak ***************************/
+	xhr.send();
+</script>
+</head>
+<body>
+<div class="analysis_holder">
+	<div class="conversion_panel"><h1> In Other Units </h1>
+		<hr/>
+		<ul type="square">
+			<li id="inPPB" style="font-size: 1.7em"></li>
+		</ul>
+		<hr/>
+	</div>
+	</div>
+<div class="current_value" id="pressure_container">
+		<i class="fas fa-wind icon"></i>
+
+	<p class="container_headers" style="text-align:center; font-weight: bold">Air Quality</p>
+    <hr/>
+    <div id="pressure_value">
+    	<img src="images/loading.gif" height="30%" width="30%" alt="Loading Barometric Pressure">
+    </div>
+</div>
+<br/>
+<div class="graph_holder">
+<p> AIR QUALITY ANALYSIS </p>
+<hr/>
+<iframe width="468" height="260" style="border:none;box-shadow:1px 1px 10px 0px black;font-family: Verdana" src="https://thingspeak.com/channels/<YourChannelID>/charts/1?bgcolor=%23ffffff&color=%23000000&dynamic=true&api_key=<YourAPIKey>&results=60&type=line&update=15"></iframe>
+
+
+
+</div>
+
+</div>
+</body>
+</html>

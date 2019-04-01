@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		//created a new XMLHttpRequest Object
+	var xhr = new XMLHttpRequest();
+	// On Changing the request State
+	xhr.onreadystatechange = function()
+	{
+		if(this.readyState==4 && this.status==200) //if state is=4(response received) and status=200 (no errors)
+		{		
+
+			
+			var fetched = JSON.parse(xhr.responseText); // parse json file to object 
+			document.getElementById("airquality_value").innerHTML="<p>"+fetched.feeds[0].field1+" ppm"; // to get air quality
+
+			/********************************* Printing of Temperature *********************************/
+			document.getElementById("temperature_value").innerHTML="<p>"+fetched.feeds[0].field2+" C";
+			/********************************* Printing of Humidity *********************************/ 	
+			document.getElementById("humidity_value").innerHTML="<p>"+fetched.feeds[0].field3+" %";
+            /********************************* Printing of Pressure *********************************/
+            document.getElementById("pressure_value").innerHTML="<p>"+fetched.feeds[0].field4+" kPa";
+
+		}
+	}
+	/***************************** Fetch Request to thingspeak ***************************/
+	xhr.open("GET","https://api.thingspeak.com/channels/569855/feeds.json?api_key=<YourAPIKey>&results=1",true);
+	/***************************** Sending of Fetch Request to thingspeak ***************************/
+	xhr.send();
+</script>
+	<meta name="viewport" content="width=device-width,intial-scale=1.0">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<title> Weather Monitor v1.0</title>
+</head>
+<body>
+<div id="topbar">
+<h1 id="header1">Weather Monitor v1.0</h1>
+</div>
+<!-- Temperature Container -->
+<div class="holder">
+<div class="container" id="temperature_container" onclick="window.open('Temperature_Details.html','_self');">
+		<i class="fas fa-thermometer-quarter icon"></i>
+	<p class="container_headers" style="text-align:center; font-weight: bold">Temperature</p>
+	<hr/>
+    <div id="temperature_value">
+    	<img src="images/loading.gif" height="30%" width="30%" alt="Loading Temperature">
+    </div>
+</div>
+<!-- Air Quality Container -->
+<div class="container" id="airquality_container" onclick="window.open('airQuality_Details.html','_self');">
+		<i class="fas fa-wind icon"></i>
+    <p class="container_headers" style="text-align:center; font-weight: bold">Air Quality</p>
+    <hr/>
+    <div id="airquality_value">
+    	<img src="images/loading.gif" height="30%" width="30%" alt="Loading Air Quality">
+    </div>
+</div>
+<br>
+
+<!-- Humidity Container -->
+<div class="container" id="humidity_container" onclick="window.open('Humidity_Details.html','_self');">
+		<i class="fas fa-tint icon"></i>
+    <p class="container_headers" style="text-align:center; font-weight: bold">Humidity</p>
+    <hr/>
+    <div id="humidity_value">
+    	<img src="images/loading.gif" height="30%" width="30%" alt="Loading Humidity">
+    </div>
+</div>
+<div class="container" id="pressure_container" onclick="window.open('Pressure_Details.html','_self');">
+	<img src="https://visualpharm.com/assets/922/Atmospheric%20Pressure-595b40b65ba036ed117d17b2.svg" height="42px" width="42px">
+    <p class="container_headers" style="text-align:center; font-weight: bold">Barometric Pressure</p>
+    <hr/>
+    <div id="pressure_value">
+    	<img src="images/loading.gif" height="30%" width="30%" alt="Loading Barometric Pressure">
+    </div>
+</div>
+</div>
+</body>
+</html>

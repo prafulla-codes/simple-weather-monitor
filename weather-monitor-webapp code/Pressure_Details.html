@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pressure</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<script>
+		//created a new XMLHttpRequest Object
+	var xhr = new XMLHttpRequest();
+	// On Changing the request State
+	xhr.onreadystatechange = function()
+	{
+		if(this.readyState==4 && this.status==200) //if state is=4(response received) and status=200 (no errors)
+		{		
+			var fetched = JSON.parse(xhr.responseText); // parse json file to object 
+            document.getElementById("pressure_value").innerHTML="<p>"+fetched.feeds[0].field4+" kPa";
+		}
+	}
+	/***************************** Fetch Request to thingspeak ***************************/
+	xhr.open("GET","https://api.thingspeak.com/channels/<YourChannelID>/feeds.json?api_key=<YourAPIKey>&results=1",true);
+	/***************************** Sending of Fetch Request to thingspeak ***************************/
+	xhr.send();
+</script>
+</head>
+<body>
+<div class="analysis_holder">
+	<div class="conversion_panel"><h1> In Other Units </h1>
+		<hr/>
+	</div>
+<div class="current_value" id="pressure_container">
+    <img class="circular_logo"  src="images/pressure.png" alt="(Pressure Logo)" title="Humidity" id="pressure_logo_container">	
+    <p class="container_headers" style="text-align:center; font-weight: bold">Barometric Pressure</p>
+    <hr/>
+    <div id="pressure_value">
+    	<img src="images/loading.gif" height="30%" width="30%" alt="Loading Barometric Pressure">
+    </div>
+</div>
+<br/>
+<div class="graph_holder">
+<p> PRESSURE ANALYSIS </p>
+<hr/>
+<iframe width="468" height="260" style="border:none;box-shadow:1px 1px 10px 0px black;" src="https://thingspeak.com/channels/<YourChannelID>/charts/4?bgcolor=%23000000&color=%23ffffff&dynamic=true&results=60&timescale=10&title=Pressure&type=line"></iframe>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,501 @@
+@media only screen and (min-width:1000px)
+{
+body
+{
+	background-color:#dfe4ea;
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+}
+p {
+	color: white;
+	font-size: 1em;
+	font-family: Verdana;
+}
+#topbar {
+	height:80px;
+	margin-top: -21px;
+	padding: 0;
+	width: 100%;
+	background-color:#70a1ff;
+}
+.icon {
+	font-size: 3em;
+	text-align: center;
+}
+.container {
+		margin-top:60px;
+		margin-bottom:15px;
+		height:100px;
+		width:350px;
+		margin-left: 50px;
+		box-shadow: 1px 1px 15px 0px black;
+		color:black;
+		background-color:#ffff;
+        border-radius: 2px;
+		display: inline-table;
+		text-align: center;
+		padding: 20px;
+     	}
+
+.container:hover {
+	background-color: #847713;
+	color:white;
+	cursor: pointer;
+}
+
+	.container ul {
+		text-align: left;
+		float: left;
+		color:black;
+		font-size:1.2em;
+	}
+	.container p {
+		font-size:1.5em;
+		font:sans-serif;
+		color:black;
+		text-align:center;
+		margin-left:20px;
+		line-height:25px;
+	}
+	.conversion_panel {
+		width: 60%;
+		height: 80%;
+		margin-right: 2%;
+		border: none;
+		background-color:white;
+		display: inline-block;
+		float: right;
+		box-shadow: 1px 1px 10px 0px black;
+		border-radius: 4px;
+		color:black;
+		font-family: Verdana;
+	}
+	.conversion_panel p {
+		color:black;
+	}
+	.conversion_panel h1 {
+		text-align: center;
+		font-size: 2em;
+
+	}
+	.conversion_panel li {
+		font-size: 2em;
+	}
+	/*current*/
+	.current_value {
+		margin-top:3%;
+		margin-left: 2%;
+		height:30%;
+		width:420px;
+		color:black;
+		display: block;
+		background-color:white;
+		border:5px solid white;
+		border-radius: 4px;
+		box-shadow: 1px 1px 10px 0px;
+		text-align: center;
+        padding: 20px;
+     	}
+
+	.current_value ul {
+		text-align: left;
+		float: left;
+		color:black;
+		font-size:1.2em;
+	}
+	.current_value p {
+		font-size:2em;
+		font:Verdana;
+		color:black;
+		text-align:center;
+		margin-left:20px;
+		line-height:25px;
+	}
+	.analysis_holder 
+	{
+		text-align: left;
+	}
+	.graph_holder {
+		margin-top: 1%;
+		display:all;
+		height: 50%;
+		margin-left: 2%;
+		width: 40%;
+	}
+	#status_holder {
+		min-width: 20%;
+		max-width: 40%;
+		height:40px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border:none;
+		color:white;
+		border-radius: 25px;
+		background-color: black;
+		text-align: center;
+		font-size: 2em;
+		vertical-align: middle;
+	}
+	.circular_logo {
+		width:100px;
+		height:100px;
+		overflow:visible;
+		margin-top:-60px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius:15px;
+		background-color:black;
+	}
+	.container_headers {
+		font-size:2em;
+		color:black;
+		float:center;
+		text-align: center;
+	}
+	.holder {
+		text-align: center;
+		background-color:#dfe4ea;
+		margin:0px;
+		padding: 0px;
+		width: 100%;
+	}
+	.section_header {
+		width: 100%;
+		height: 50px;
+		font-size: 1.2em;
+		vertical-align: middle;
+		color: white;
+		background-color:black;
+		text-align: center;
+		margin: 0px;
+	}
+.weather_panel
+{
+	margin-bottom: auto;
+	margin-top: auto;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	min-width:800px;
+	max-width:300px;
+	height:wrap-content;
+	background-color:black;
+	color:white;
+	opacity: 0.90;
+	border-radius:8px;
+	border:1px white solid;
+	-webkit-animation-name:panel_anim;
+	-webkit-animation-duration:2s;
+	font-size:1em;
+}
+
+@-webkit-keyframes panel_anim
+{
+	from{height:0px;}
+	to{height:wrap-content;}
+}
+.weather_panel h2 {
+	line-height: 50px;
+}
+#header1 {
+	padding-left: 10px;
+	vertical-align: middle;
+	padding-top: 25px;
+	color:#ffffff;
+	font-size: 1.5em;
+	font-family: Verdana;
+}
+
+
+.parameter_content {
+		text-align: center;
+		height: 250px;
+		display: inline-table;
+		margin-right: 100px;
+		color: midnightblue;
+	}
+
+.paramter_content p {
+	font-size: 1em;
+}
+	
+	.parameter_logo_container{
+        width:100px;
+		height:100px;
+		overflow:visible;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius:50%;
+		vertical-align: middle;
+		background-color:white;
+		text-align: center;
+	}
+	.parameter_logo_container img {
+		width: 50px;
+		height: 50px;
+		margin-top: 22px;
+		
+	}
+
+.status_holder
+{
+	width:10%;
+	display: inline;
+	background-color:black;
+	border-radius:15px;
+	border:1px white solid;
+	height:1%;
+	color:white;
+	background-image:none;
+}
+.status_holder 
+{
+	padding-left: 15px;
+}
+}
+
+@media only screen and (min-width:0px) and (max-width:1000px)
+{
+body
+{
+	background-color:black;
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+}
+p {
+	color: white;
+	font-size: 1.2em;
+}
+.container {
+		margin-top:15%;
+		height:200px;
+		width:85%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		color:black;
+		background-color:#dfb228;
+		border:5px solid black;
+        border-radius: 50px;
+		text-align: center;
+        padding: 20px;
+     	}
+
+.container:hover {
+	background-color: #847713;
+	color:white;
+	cursor: pointer;
+}
+
+	.container ul {
+		text-align: left;
+		float: left;
+		color:black;
+		font-size:1em;
+	}
+	.container p {
+		font-size:1em;
+		font:sans-serif;
+		color:black;
+		text-align:center;
+		margin-left:20px;
+		line-height:25px;
+	}
+	.conversion_panel {
+		width: 97%;
+		height: 80%;
+		border: none;
+		margin-right: 2%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 15px;
+		color:black;
+		background-color: white;
+	}
+	.conversion_panel p {
+		color:black;
+	}
+	.conversion_panel h1 {
+		text-align: center;
+		font-size: 1.2em;
+
+	}
+	.conversion_panel li {
+		font-size: 1em;
+	}
+	/*current*/
+	.current_value {
+		margin-top:15%;
+		margin-left:auto;
+		margin-right: auto;
+		height:30%;
+		width:85%;
+		
+		display: block;
+		background-color:white;
+		border:5px solid rgb(161, 152, 152);
+        border-radius: 50px;
+		text-align: center;
+        padding: 20px;
+     	}
+
+	.current_value ul {
+		text-align: left;
+		float: left;
+		font-size:1.2em;
+	}
+	.current_value p {
+		font-size:2em;
+		font:sans-serif;
+		color:white;
+		text-align:center;
+		margin-left:20px;
+		line-height:25px;
+	}
+	.analysis_holder 
+	{
+		text-align: left;
+	}
+	.graph_holder {
+		margin-top: 1%;
+		display:all;
+		height: 50%;
+		margin-left: 2%;
+		width: 40%;
+	}
+	#status_holder {
+		min-width: 20%;
+		max-width: 50%;
+		height:40px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border:none;
+		border-radius: 2px;
+		background-color: black;
+		text-align: center;
+		font-size: 2em;
+		vertical-align: middle;
+	}
+	.circular_logo {
+		width:100px;
+		height:100px;
+		overflow:visible;
+		margin-top:-60px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius:15px;
+		background-color:black;
+	}
+	.container_headers {
+		font-size:2em;
+		color:black;
+		float:center;
+		text-align: center;
+	}
+	.holder {
+		text-align: center;
+		background-color:#2b8b7f;
+		margin:0px;
+		padding: 0px;
+		width: 100%;
+	}
+	.section_header {
+		width: 100%;
+		height: 50px;
+		font-size: 1.2em;
+		vertical-align: middle;
+		color: white;
+		background-color:black;
+		text-align: center;
+		margin: 0px;
+	}
+.weather_panel
+{
+	margin-bottom: auto;
+	margin-top: auto;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	min-width:800px;
+	max-width:300px;
+	height:wrap-content;
+	background-color:black;
+	color:white;
+	opacity: 0.90;
+	border-radius:8px;
+	border:1px white solid;
+	-webkit-animation-name:panel_anim;
+	-webkit-animation-duration:2s;
+	font-size:1em;
+}
+
+@-webkit-keyframes panel_anim
+{
+	from{height:0px;}
+	to{height:wrap-content;}
+}
+.weather_panel h2 {
+	line-height: 50px;
+}
+#header1 {
+	text-align: center;
+	color:white;
+}
+
+.parameter_content {
+		text-align: center;
+		height: 250px;
+		display: inline-table;
+		margin-right: 100px;
+		color: midnightblue;
+	}
+
+.paramter_content p {
+	font-size: 1em;
+}
+	
+	.parameter_logo_container{
+        width:100px;
+		height:100px;
+		overflow:visible;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius:50%;
+		vertical-align: middle;
+		background-color:white;
+		text-align: center;
+	}
+	.parameter_logo_container img {
+		width: 50px;
+		height: 50px;
+		margin-top: 22px;
+		
+	}
+
+.status_holder
+{
+	width:10%;
+	display: inline;
+	background-color:black;
+	border-radius:15px;
+	border:1px white solid;
+	height:1%;
+	color:black;
+	background-image:none;
+}
+.status_holder 
+{
+	padding-left: 15px;
+}
+	}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Humidity</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<script>
+		//created a new XMLHttpRequest Object
+	var xhr = new XMLHttpRequest();
+	// On Changing the request State
+	xhr.onreadystatechange = function()
+	{
+		if(this.readyState==4 && this.status==200) //if state is=4(response received) and status=200 (no errors)
+		{		
+			var fetched = JSON.parse(xhr.responseText); // parse json file to object 
+            document.getElementById("humidity_value").innerHTML="<p>"+fetched.feeds[0].field3+" %";
+
+         	var status_holder = document.getElementById("status_holder");
+         	var status = document.getElementById("current_status");
+         	var humidity = parseFloat(fetched.feeds[0].field3);
+         	if(humidity<=39 && humidity>=0)
+         	{
+         		status.innerHTML="Dry";
+         		status_holder.style.backgroundColor="#af1c1c";
+         	}	
+         	else if(humidity>=40 && humidity<=60)
+         	{
+         		status.innerHTML="Optimum";
+         		status_holder.style.backgroundColor="#066820";
+         	}
+         	else
+         	{
+         		status.innerHTML="Moist";
+         		status_holder.style.backgroundColor="#061b68";
+         	}
+
+		}
+	}
+	/***************************** Fetch Request to thingspeak ***************************/
+	xhr.open("GET","https://api.thingspeak.com/channels/<YourChannelID>/feeds.json?api_key=<YourAPIKey>&results=1",true);
+	/***************************** Sending of Fetch Request to thingspeak ***************************/
+	xhr.send();
+</script>
+</head>
+<body>
+<div class="analysis_holder">
+	<div class="conversion_panel">
+		<h1> Current Status </h1>
+		<div id="status_holder">	
+			<p id="current_status">--</p>
+		</div>
+		<hr/>
+		<img src="images/humiditiy_chart.jpg" width="100%" height="430px">
+	</div>
+<div class="current_value" id="pressure_container">
+		<i class="fas fa-tint icon"></i>
+   <p class="container_headers" style="text-align:center; font-weight: bold">Humidity</p>
+    <hr/>
+    <div id="humidity_value">
+    	<img src="images/loading.gif" height="30%" width="30%" alt="Loading Barometric Pressure">
+    </div>
+</div>
+<br/>
+<div class="graph_holder">
+<p> HUMIDITY ANALYSIS </p>
+<hr/>
+<iframe width="468" height="260" style="border:none;box-shadow:1px 1px 10px 0px black;font-family: Verdana" src="https://thingspeak.com/channels/<YourChannelID>/charts/3?bgcolor=%23ffffff&color=%230000000&dynamic=true&api_key=<YourAPIKey>&results=60&type=line&update=15"></iframe>
+</div>
+</div>
+</body>
+</html>
