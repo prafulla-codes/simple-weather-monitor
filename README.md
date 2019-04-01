@@ -1,10 +1,27 @@
 <h3>Simple Weather Monitor v1.0 </h3>
 <hr/>
-This is a simple weather monitoring system using Arduino UNO R3
+This is a simple weather monitoring system using Arduino UNO R3 
+
+Get this repository using : <br>
+<code> git clone https://github.com/Pika1998/simple-weather-monitor.git </code>
 <br>
+
+This repositary offers:- <br>
+<ol>
+   <li>
+      <b> Weather Monitor Arduino Code (weathersystem/weathersystem.ino) </b>
+   </li>
+   <li>
+      <b> Weather Monitor Web Application Source Code (weather-monitor-webapp code) </b>
+   </li>
+   </ol>
+<br>
+<b>
+<h5> Weather Monitor v1.0 Features:-</h5><br>
 + Records Temperature & Humidity<br>
 + Records Pressure<br>
 + Records Concentration of CO2<br>
+   </b>
 <h3> Preview </h3>
 <hr/>
 <img src="Preview/dashboard-preview.png">
