@@ -21,6 +21,9 @@ This is a simple weather monitoring system using Arduino UNO R3
   <li> Thingspeak Analytics </li>
   <a href="https://thingspeak.com/"> Click here to register on thingspeak </a>
   </ul>
+<h3> Conceptual Working </h3>
+<hr/>
+<img src="Preview/working.png">
 <h3> Components Required </h3>
 <hr/>
 <ol>
