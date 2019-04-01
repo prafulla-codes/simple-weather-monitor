@@ -7,6 +7,8 @@ This is a simple weather monitoring system using Arduino UNO R3
 + Records Concentration of CO2<br>
 <h3> Preview </h3>
 <hr/>
+<img src="Preview/dashboard-preview.png">
+<hr/>
 <h3> Technologies Used </h3>
 <ul type="square">
    <li> HTML </li>
