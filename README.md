@@ -1,4 +1,4 @@
-<h3> Simple Weather Monitor v1.0 </h3>
+<h3>Simple Weather Monitor v1.0 </h3>
 <hr/>
 This is a simple weather monitoring system using Arduino UNO R3
 <br>
