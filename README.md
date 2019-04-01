@@ -9,16 +9,14 @@ This is a simple weather monitoring system using Arduino UNO R3
 <hr/>
 <h3> Technologies Used </h3>
 <ul type="square">
+   <li> HTML </li>
+  <li> CSS </li>
+  <li> JavaScript </li>
   <li> Arduino UNO IDE:- </li>
   <a href="https://www.arduino.cc/en/Main/Software"> Click here to get Arduino IDE </a>
   <li> Thingspeak Analytics </li>
   <a href="https://thingspeak.com/"> Click here to register on thingspeak </a>
-  <li> HTML </li>
-  <li> CSS </li>
-  <li> JavaScript </li>
-  
   </ul>
-
 <h3> Components Required </h3>
 <hr/>
 <ol>
