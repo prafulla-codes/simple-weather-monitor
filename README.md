@@ -44,3 +44,5 @@ This repositary offers:- <br>
 <h3> Components Required </h3>
 <hr/>
 <img src="Preview/components.png">
+<h3> Circuit Diagram </h3>
+
