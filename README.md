@@ -43,6 +43,6 @@ This repositary offers:- <br>
 <img src="Preview/working.png">
 <h3> Components Required </h3>
 <hr/>
-<img src="Preview/components.png">
+<img src="Preview/components.png" width="70%">
 <h3> Circuit Diagram </h3>
-
+<img src="Preview/circuit_diagram.png">
