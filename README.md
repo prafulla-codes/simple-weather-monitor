@@ -45,4 +45,6 @@ This repositary offers:- <br>
 <hr/>
 <img src="Preview/components.png" width="70%">
 <h3> Circuit Diagram </h3>
+<hr/>
 <img src="Preview/circuit_diagram.png">
+
